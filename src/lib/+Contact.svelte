@@ -134,9 +134,9 @@
           placeholder="John Doe"
           class="w-full bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
-        {#if nameError}
+        <!-- {#if nameError}
           <p class="text-red-500 text-xs mt-1">{nameError}</p>
-        {/if}
+        {/if} -->
       </div>
 
       <div>
@@ -148,9 +148,9 @@
           placeholder="example@mail.com"
           class="w-full bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
-        {#if emailError}
+        <!-- {#if emailError}
           <p class="text-red-500 text-xs mt-1">{emailError}</p>
-        {/if}
+        {/if} -->
       </div>
 
       <div>
@@ -163,9 +163,9 @@
           placeholder="..."
           class="w-full bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
-        {#if questionError}
+        <!-- {#if questionError}
           <p class="text-red-500 text-xs mt-1">{questionError}</p>
-        {/if}
+        {/if} -->
         <div class="text-right text-xs text-gray-500">{questionLength}/400</div>
       </div>
 
