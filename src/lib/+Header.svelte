@@ -25,7 +25,7 @@
 
 <div class="  flex justify-center">
 	<nav
-		class="fixed  z-10 flex h-[60px] w-[95%] items-center justify-between rounded-2xl border border-white/5 bg-[rgba(8,6,10,0.83)] px-2 py-3 "
+		class="fixed top-5 z-10 flex h-[60px] w-[95%] items-center justify-between rounded-2xl border border-white/5 bg-[rgba(8,6,10,0.83)] px-2 py-3 "
 	>
 		<div class="flex items-center justify-between">
 			<!-- Logo Section - Exactly as original -->
@@ -149,7 +149,7 @@
 				</a>
 
 				<div
-					class="ml-1 flex h-[36px]  items-center gap-[6px] rounded-md bg-purple-800 px-3 py-2"
+					class="ml-1 flex h-[36px] w-[160px] items-center gap-[6px] rounded-md bg-purple-800 px-3 py-2"
 				>
 					<img
 						src={Avatar}
@@ -157,7 +157,7 @@
 						class="h-[28px] w-[28px] rounded-full border border-white/5"
 					/>
 					<span
-						class="font-inter-tight h-[20px]  text-[14px] font-medium leading-5 tracking-normal text-white"
+						class="font-inter-tight h-[20px] w-[80px] text-[14px] font-medium leading-5 tracking-normal text-white"
 						>JohnDoe_911</span
 					>
 					<img src={Arrow} alt="Logo" class="ml-1 h-[6px] w-[12px]" />

@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* Import Poppins font */
+
+/* Apply Poppins globally */
+
+/* src/app.css */
+body {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+h3 {
+   font-family: "Inter Tight", sans-serif;
+}
