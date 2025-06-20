@@ -22,7 +22,8 @@
 				'Access to 100+ public servers',
 				' monthly public car update',
 				'Help & Faq support'
-			]
+			],
+			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white '
 		},
 		{
 			icon: '/tier0.png',
@@ -39,8 +40,9 @@
 				'VIP Alternative and Drift Servers',
 				'Priority Queue for Server Hosting'
 			],
-			dp: ''
+			dp: '',
 			// dp: 'shadow-[0_0_20px_0_rgba(255,255,255,0.7)]'
+			btn: 'bg-white text-black '
 		},
 		{
 			icon: '/Tier3.png',
@@ -59,7 +61,8 @@
 				'Priority Queue for Server Hosting'
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.05)_25.18%,rgba(255,129,38,0.05)_100%)]',
-			dp: ''
+			dp: '',
+			btn: 'bg-white text-black '
 			// dp: 'shadow-[0_0_20px_0_rgba(255,129,38,0.7)]'
 		},
 		{
@@ -79,7 +82,8 @@
 				'Priority Queue for Server Hosting'
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.22)_25.18%,rgba(254,44,85,0.22)_100%)]',
-			dp: ''
+			dp: '',
+			btn: 'bg-white text-black '
 			// dp: 'shadow-[0_0_20px_0_rgba(221,3,85,0.7)]  '
 		}
 		// Add 2 more plans as needed...
@@ -114,9 +118,9 @@
 	<div class="b mt-24 flex w-[95%] flex-col items-center justify-center gap-1">
 		<div class="flex w-full flex-col items-center justify-center rounded-md sm:flex-row sm:gap-2">
 			<div class="SI font-bold">JOIN</div>
-			<!-- <div class="SI font-bold text-pink-700">28,643</div> -->
+			<div class="SI font-bold text-[#dd0355] sm:hidden">28,643</div>
 
-			<span>
+			<span class="hidden sm:flex">
 				{#each digits as char, i}
 					{#if char === ','}
 						<span class="comma">,</span>

@@ -8,6 +8,7 @@
 	export let giftIcon;
 	export let bg;
 	export let dp;
+	export let btn;
 	export let selectedPrice;
 	export let selectedType;
 	import { slide } from 'svelte/transition';
@@ -55,10 +56,10 @@
 
 	<div class="flex w-full flex-col items-center gap-2">
 		<div
-			class="flex h-[52px] w-full items-center justify-center gap-[20px] rounded-md bg-[rgba(72,71,76,0.79)] p-[16px_28px]"
+			class="flex h-[52px] w-full items-center justify-center gap-[20px] rounded-md {btn} p-[16px_28px]"
 		>
 			<button
-				class="font-roboto text-[16px] font-bold uppercase italic leading-[20px] text-[rgba(238,237,238,0.68)]"
+				class="font-roboto text-[16px] font-bold uppercase italic leading-[20px] "
 			>
 				{buttonText}
 			</button>

@@ -6,6 +6,7 @@
 			price: 'Free',
 			description: 'Everything you need to start playing.',
 			badge: 'Current Plan',
+     btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
 			features: [
 				true,
 				true,
@@ -25,7 +26,8 @@
 				true,
 				false,
 				false,
-				'4'
+				'4',
+        
 			]
 		},
 		{
@@ -33,6 +35,7 @@
 			icon: '/tier0.png',
 			price: '$3.99/month',
 			description: 'Get a taste',
+      btn: 'bg-white text-black ',
 			badge: 'SUBSCRIPTION',
 			features: [
 				true,
@@ -61,6 +64,7 @@
 			icon: '/Tier3.png',
 			price: '$7.99/month',
 			description: 'Amplify your experience',
+      btn: 'bg-white text-black ',
 			badge: 'FREE 7-DAYS TRIAL',
 			features: [
 				true,
@@ -88,6 +92,7 @@
 			name: 'Tier 3',
 			icon: '/Tier4.png',
 			price: '$12.99/month',
+      btn: 'bg-white text-black ',
 			description: 'Reach new limits',
 			badge: 'SUBSCRIPTION',
 			features: [
@@ -168,7 +173,7 @@
 					<p class="text-md font-roboto font-bold uppercase">{tier.name}</p>
 				</div>
 				<button
-					class=" justify-center whitespace-nowrap rounded-xl bg-white px-1 py-3 text-xl font-bold italic text-black transition-all duration-300"
+					class=" justify-center whitespace-nowrap rounded-xl {tier.btn}  px-1 py-3 text-xl font-bold italic  transition-all duration-300"
 					>{tier.badge}</button
 				>
 			</div>
