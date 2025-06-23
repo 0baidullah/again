@@ -23,12 +23,13 @@
 				' monthly public car update',
 				'Help & Faq support'
 			],
-			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white '
+			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
+			month: ''
 		},
 		{
 			icon: '/tier0.png',
 			tier: 'Tier 1',
-			title: 'Public+',
+			title: 'Public',
 			price: '$3.99',
 			anuallayprice: '$2.99',
 			buttonText: 'Upgrade',
@@ -40,9 +41,10 @@
 				'VIP Alternative and Drift Servers',
 				'Priority Queue for Server Hosting'
 			],
-			dp: '',
-			// dp: 'shadow-[0_0_20px_0_rgba(255,255,255,0.7)]'
-			btn: 'bg-white text-black '
+
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
+			btn: 'bg-white text-black ',
+			month: '/month'
 		},
 		{
 			icon: '/Tier3.png',
@@ -61,9 +63,10 @@
 				'Priority Queue for Server Hosting'
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.05)_25.18%,rgba(255,129,38,0.05)_100%)]',
-			dp: '',
-			btn: 'bg-white text-black '
-			// dp: 'shadow-[0_0_20px_0_rgba(255,129,38,0.7)]'
+
+			btn: 'bg-white text-black ',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
+			month: '/month'
 		},
 		{
 			icon: '/Tier4.png',
@@ -82,14 +85,15 @@
 				'Priority Queue for Server Hosting'
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.22)_25.18%,rgba(254,44,85,0.22)_100%)]',
-			dp: '',
-			btn: 'bg-white text-black '
-			// dp: 'shadow-[0_0_20px_0_rgba(221,3,85,0.7)]  '
+
+			btn: 'bg-white text-black ',
+			month: '/month',
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
 		}
 		// Add 2 more plans as needed...
 	];
 
-	let selected = 'monthly';
+	let selected = 'month';
 	// @ts-ignore
 	function select(type) {
 		selected = type;
@@ -110,7 +114,7 @@
 	}
 
 	let formatted = formatIndianComma(memberCount); // => "28,643"
-	let digits = formatted.split(''); // => ['2','8',',','6','4','3']
+	let digits = formatted.split('');
 </script>
 
 <div class=" flex items-center justify-center">
@@ -149,23 +153,23 @@
 	</div>
 </div>
 
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center ">
 	<div class="mt-6 flex flex-col items-center justify-center gap-1 py-1">
 		<div class="flex items-center justify-center">
 			<div class="relative z-[2] flex rounded-lg bg-[rgba(8,6,10,0.83)] p-1">
 				<button
-					class="btn duration-400 rounded-md px-4 py-2 transition-colors"
-					class:bg-white={selected === 'monthly'}
-					class:text-black={selected === 'monthly'}
-					class:bg-transparent={selected !== 'monthly'}
-					class:text-white={selected !== 'monthly'}
-					on:click={() => select('monthly')}
+					class="btn duration-400 rounded-md px-4 py-2 transition-colors delay-150 cursor-pointer"
+					class:bg-white={selected === 'month'}
+					class:text-black={selected === 'month'}
+					class:bg-transparent={selected !== 'month'}
+					class:text-white={selected !== 'month'}
+					on:click={() => select('month')}
 				>
 					Monthly
 				</button>
 
 				<button
-					class="btn rounded-md px-4 py-2 transition-colors duration-300"
+					class="btn rounded-md px-4 py-2 transition-colors duration-300 cursor-pointer"
 					class:bg-white={selected === 'annualy'}
 					class:text-black={selected === 'annualy'}
 					class:bg-transparent={selected !== 'annualy'}
@@ -182,11 +186,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="group inline-block cursor-pointer text-white hover:underline">
+		<div class="group inline-flex cursor-pointer items-center gap-1">
 			Can't choose? Compare plans
-			<span class="inline-block transition-transform duration-200 group-hover:translate-x-2"
-				>&gt;</span
-			>
+			<img
+				src="/leftarrow.png"
+				alt="arrow"
+				class="h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform duration-300 group-hover:translate-x-[5px]"
+			/>
 		</div>
 	</div>
 </div>
@@ -197,155 +203,11 @@
 	{#each plans as plan}
 		<Tiercard
 			{...plan}
-			selectedPrice={selected === 'monthly' ? plan.price : plan.anuallayprice}
+			selectedPrice={selected === 'month' ? plan.price : plan.anuallayprice}
 			selectedType={selected}
 		/>
 	{/each}
 </div>
-
-<!-- <div class="mx-8 mt-12 grid rounded-lg bg-[#08060A] md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5">
-	<div class="hidden flex-col rounded-xl bg-[#08060A] text-white shadow 2xl:flex">
-		<div class="sticky top-20 flex h-[7.3rem] flex-col gap-2 self-stretch bg-[#08060A] p-3"></div>
-		<p
-			class="font-inter-tight flex h-12 w-full items-center border-b border-t border-[rgba(255,255,255,0.1)] pb-4 pt-3 text-[18px] font-extrabold"
-		>
-			Features
-		</p>
-		<ul>
-			<li
-				class="  font-inter-tight flex h-12 w-full items-center border-b border-[rgba(255,255,255,0.1)] pb-4 pt-3 text-sm"
-			>
-				Acces to Help and Faq
-			</li>
-		</ul>
-		<p
-			class="font-inter-tight flex h-12 w-full items-center border-b border-[rgba(255,255,255,0.1)] pb-4 pt-3 text-[18px] font-extrabold"
-		>
-			Server Hosting
-		</p>
-		<ul class="space-y-0">
-			<li
-				class=" font-inter-tight flex h-12 w-full items-center border-b border-[rgba(255,255,255,0.1)] pb-4 pt-3 text-sm"
-			></li>
-		</ul>
-	</div>
-	<div class="flex flex-col rounded-xl">
-		<div
-			class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
-		>
-			<div class="flex items-center gap-2 2xl:justify-center">
-				<div class="">
-					<img src="/tier0.png" alt=" icon" class="h-5 w-5" />
-				</div>
-				<p class="text-md font-roboto font-bold uppercase">Tier 0</p>
-			</div>
-			<button
-				class="font-roboto flex justify-center whitespace-nowrap rounded-xl bg-[#211F23] px-1 py-3 text-xl font-bold italic transition-all duration-300"
-				>Current Plan</button
-			>
-		</div>
-		<div
-			class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-		>
-			Everything you need to start playing
-		</div>
-
-		<ul>
-			<li
-				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-			>
-				<img src="/Tick2.png" alt=" icon" class="h-5 w-5" />
-			</li>
-		</ul>
-	</div>
-	<div class="flex flex-col rounded-xl">
-		<div
-			class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
-		>
-			<div class="flex items-center gap-2 2xl:justify-center">
-				<div class="">
-					<img src="/tier0.png" alt=" icon" class="h-5 w-5" />
-				</div>
-				<p class="text-md font-roboto font-bold uppercase">Tier 1</p>
-			</div>
-			<button
-				class="font-roboto flex justify-center whitespace-nowrap rounded-xl bg-white px-1 py-3 text-xl font-bold italic text-black transition-all duration-300"
-				>SUBSCRIPTION</button
-			>
-		</div>
-		<div
-			class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-		>
-			Everything you need to start playing
-		</div>
-
-		<ul>
-			<li
-				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-			>
-				<img src="/Tick2.png" alt=" icon" class="h-5 w-5" />
-			</li>
-		</ul>
-	</div>
-	<div class="flex flex-col rounded-xl">
-		<div
-			class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
-		>
-			<div class="flex items-center gap-2 2xl:justify-center">
-				<div class="">
-					<img src="/Tier3.png" alt=" icon" class="h-5 w-5" />
-				</div>
-				<p class="text-md font-roboto font-bold uppercase">Tier 2</p>
-			</div>
-			<button
-				class="font-roboto flex justify-center whitespace-nowrap rounded-xl bg-white px-1 py-3 text-xl font-bold italic text-black transition-all duration-300"
-				>FREE 7-DAYS TRIAL</button
-			>
-		</div>
-		<div
-			class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-		>
-			Everything you need to start playing
-		</div>
-
-		<ul>
-			<li
-				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-			>
-				<img src="/Tick2.png" alt=" icon" class="h-5 w-5" />
-			</li>
-		</ul>
-	</div>
-	<div class="flex flex-col rounded-xl">
-		<div
-			class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
-		>
-			<div class="flex items-center gap-2 2xl:justify-center">
-				<div class="">
-					<img src="/Tier4.png" alt=" icon" class="h-5 w-5" />
-				</div>
-				<p class="text-md font-roboto font-bold uppercase">Tier 3</p>
-			</div>
-			<button
-				class="font-roboto flex justify-center whitespace-nowrap rounded-xl bg-white px-1 py-3 text-xl font-bold italic text-black transition-all duration-300"
-				>SUBSCRIPTION</button
-			>
-		</div>
-		<div
-			class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-		>
-			Everything you need to start playing
-		</div>
-
-		<ul>
-			<li
-				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
-			>
-				<img src="/Tick2.png" alt=" icon" class="h-5 w-5" />
-			</li>
-		</ul>
-	</div>
-</div> -->
 
 <Limits />
 <Contact />
@@ -360,7 +222,7 @@
 			height: 800px;
 			opacity: 100%;
 			transform: rotate(75deg);
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 1440px) {
 			position: absolute;
@@ -370,7 +232,7 @@
 			height: 800px;
 			opacity: 100%;
 			transform: rotate(75deg);
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 1240px) {
 			position: absolute;
@@ -380,7 +242,7 @@
 			height: 350px;
 			opacity: 100%;
 			transform: rotate(75deg);
-			z-index: 0;
+			z-index: -50;
 		}
 
 		@media (max-width: 1024px) {
@@ -391,7 +253,7 @@
 			height: 350px;
 			opacity: 100%;
 			transform: rotate(75deg);
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 768px) {
 			position: absolute;
@@ -401,7 +263,7 @@
 			height: 350px;
 			opacity: 100%;
 			/* transform: rotate(75deg); */
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 636px) {
 			position: absolute;
@@ -411,7 +273,7 @@
 			height: 350px;
 			opacity: 100%;
 			/* transform: rotate(75deg); */
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 536px) {
 			position: absolute;
@@ -421,7 +283,7 @@
 			height: 280px;
 			opacity: 100%;
 			/* transform: rotate(75deg); */
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 462px) {
 			position: absolute;
@@ -431,7 +293,7 @@
 			height: 250px;
 			opacity: 100%;
 			/* transform: rotate(75deg); */
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 425px) {
 			position: absolute;
@@ -441,7 +303,7 @@
 			height: 250px;
 			opacity: 100%;
 			/* transform: rotate(75deg); */
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 375px) {
 			position: absolute;
@@ -451,7 +313,7 @@
 			height: 250px;
 			opacity: 100%;
 			/* transform: rotate(75deg); */
-			z-index: 0;
+			z-index: -50;
 		}
 		@media (max-width: 320px) {
 			position: absolute;
@@ -461,7 +323,7 @@
 			height: 230px;
 			opacity: 100%;
 			/* transform: rotate(75deg); */
-			z-index: 0;
+			z-index: -50;
 		}
 
 		/*
@@ -634,25 +496,6 @@
 			transform: translateY(0);
 		}
 	}
-	/* .roller-digit > .digit-row:nth-child(odd) {
-		background-color: rgba(221, 3, 85, 0.1);
-	}
-	.roller-digit > .digit-row:nth-child(even) {
-		background-color: rgba(221, 3, 85, 0.2);
-	}
-	.roller-digit > .digit-row:nth-child(10) {
-		background-color: rgba(221, 3, 85, 0.3);
-	}
-	.roller-digit > .digit-row:nth-child(11) {
-		background-color: rgba(221, 3, 85, 0.4);
-	}
-	.roller-digit > .digit-row:nth-child(12) {
-		background-color: rgba(221, 3, 85, 0.5);
-	}
-
-	.roller-digit > .digit-row:nth-child(13) {
-		background-color: rgba(221, 3, 85, 0.6);
-	} */
 
 	@keyframes rollDownBounce {
 		0% {

@@ -79,7 +79,7 @@
   }
 </script>
 
-<div class="mt-16 bg-gray-1000 text-white py-20 px-6 md:px-12  mx-4 sm:mx-8">
+<div class="mt-16 bg-[#08060A] text-white py-20 px-6 md:px-12  mx-4 sm:mx-8">
   <div
     class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-10"
   >
@@ -187,9 +187,9 @@
 </div>
 
 <style>
-  .bg-gray-1000 {
+  /* .bg-gray-1000 {
     background-color: #111;
-  }
+  } */
   input,
   textarea {
     transition:
