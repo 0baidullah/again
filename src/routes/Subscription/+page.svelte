@@ -31,7 +31,8 @@
 				'Help & Faq support'
 			],
 			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
-			month: ''
+			month: '',
+			discount:'-20%'
 		},
 		{
 			icon: '/tier0.png',
@@ -50,8 +51,9 @@
 			],
 
 			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
-			btn: 'bg-white text-black ',
-			month: '/month'
+			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
+			month: '/month',
+			discount:'-20%'
 		},
 		{
 			icon: '/Tier3.png',
@@ -71,9 +73,10 @@
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.05)_25.18%,rgba(255,129,38,0.05)_100%)]',
 
-			btn: 'bg-white text-black ',
+			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			month: '/month'
+			,discount:'-20%'
 		},
 		{
 			icon: '/Tier4.png',
@@ -92,10 +95,10 @@
 				'Priority Queue for Server Hosting'
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.22)_25.18%,rgba(254,44,85,0.22)_100%)]',
-
-			btn: 'bg-white text-black ',
+			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
-			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]'
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
+			discount:'-40%'
 		}
 		// Add 2 more plans as needed...
 	];
@@ -229,7 +232,7 @@ let width;
 				</button>
 
 				<div
-					class="badge absolute bottom-8 left-24 rounded-2xl bg-green-400 px-2 py-1 text-sm text-black"
+					class="badge absolute w bottom-8 left-58 rounded-2xl bg-[#6aff67] py-1 px-1 text-sm text-black"
 				>
 					Save 20%
 				</div>
@@ -240,14 +243,14 @@ let width;
 			<img
 				src="/leftarrow.png"
 				alt="arrow"
-				class="h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform duration-300 group-hover:translate-x-[5px]"
+				class="h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform duration-600 group-hover:translate-x-[5px]"
 			/>
 		</div>
 	</div>
 </div>
 
 <div
-	class=" mt-12 grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-2 lg:gap-2 xl:grid-cols-4"
+	class=" mt-12 grid grid-cols-1 gap-3 lg:gap-1 px-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-2  xl:grid-cols-4"
 >
 	{#each plans as plan}
 		<Tiercard
@@ -464,6 +467,10 @@ let width;
 		/* font-family: 'Inter Tight'; */
 		font-weight: 400;
 		text-align: center;
+@media (max-width: 320px) {
+	font-size: 14px;
+}
+
 	}
 	.btn {
 		width: 150px;
@@ -475,18 +482,11 @@ let width;
 		}
 	}
 	.badge {
-		background: #6aff67;
-		color: black;
-		font-size: 10px;
-		left: 250px;
-		font-weight: 500;
-		padding-left: 5px;
-		padding-right: 5px;
-
+		
 		@media (max-width: 320px) {
 			width: 50px;
 			height: 16px;
-			font-size: 9px;
+			font-size: 8px;
 		}
 	}
 

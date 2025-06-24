@@ -168,7 +168,7 @@
 			<div
 				class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
 			>
-				<div class="flex items-center gap-2 2xl:justify-center">
+				<div class="flex items-center gap-2   lg:justify-center">
 					<img src={tier.icon} alt=" icon" class="h-5 w-5" />
 					<p class="text-md font-roboto font-bold uppercase">{tier.name}</p>
 				</div>
@@ -178,7 +178,7 @@
 				>
 			</div>
 			<div
-				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold 2xl:justify-center 2xl:p-0"
+				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold lg:justify-center 2xl:p-0"
 			>
 				{tier.description}
 			</div>
