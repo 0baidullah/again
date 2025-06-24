@@ -1,10 +1,17 @@
 <script>
+// @ts-nocheck
+
 	import Defaul from '../../lib/assets/Default.png';
 	import Tiercard from '../../lib/+Tiercard.svelte';
 	import Gift from '../../lib/assets/Gift.png';
 	import Contact from '$lib/+Contact.svelte';
 	import Limts from '../../lib/+Limits.svelte';
 	import Limits from '../../lib/+Limits.svelte';
+	import MobileLimts from '../../lib/+Mobile.svelte';
+	import Mobile from '../../lib/+Mobile.svelte';
+	  import { onMount, onDestroy } from 'svelte';
+
+
 
 	const plans = [
 		{
@@ -88,7 +95,7 @@
 
 			btn: 'bg-white text-black ',
 			month: '/month',
-			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]'
 		}
 		// Add 2 more plans as needed...
 	];
@@ -113,8 +120,50 @@
 		return (commaedRest ? commaedRest + ',' : '') + last3;
 	}
 
-	let formatted = formatIndianComma(memberCount); // => "28,643"
+	let formatted = formatIndianComma(memberCount);
 	let digits = formatted.split('');
+
+
+
+//  let isMobile = true;
+
+//   function checkScreen() {
+//     isMobile = window.innerWidth <= 1024;
+//   }
+
+//   onMount(() => {
+//     checkScreen();
+//     window.addEventListener('resize', checkScreen);
+//   });
+
+//   onDestroy(() => {
+//     window.removeEventListener('resize', checkScreen);
+//   });
+
+
+let isMobile = false;
+
+  onMount(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1024px)');
+
+    // Initial value
+    isMobile = mediaQuery.matches;
+
+    // Update on screen resize
+	// @ts-ignore
+	const handler = (event) => {
+	  isMobile = event.matches;
+	};
+
+    mediaQuery.addEventListener('change', handler);
+
+    // Cleanup
+    return () => {
+      mediaQuery.removeEventListener('change', handler);
+    };
+  });
+let width;
+  
 </script>
 
 <div class=" flex items-center justify-center">
@@ -153,12 +202,12 @@
 	</div>
 </div>
 
-<div class="flex items-center justify-center ">
+<div class="flex items-center justify-center">
 	<div class="mt-6 flex flex-col items-center justify-center gap-1 py-1">
 		<div class="flex items-center justify-center">
 			<div class="relative z-[2] flex rounded-lg bg-[rgba(8,6,10,0.83)] p-1">
 				<button
-					class="btn duration-400 rounded-md px-4 py-2 transition-colors delay-150 cursor-pointer"
+					class="btn duration-400 cursor-pointer rounded-md px-4 py-2 transition-colors delay-150"
 					class:bg-white={selected === 'month'}
 					class:text-black={selected === 'month'}
 					class:bg-transparent={selected !== 'month'}
@@ -169,7 +218,7 @@
 				</button>
 
 				<button
-					class="btn rounded-md px-4 py-2 transition-colors duration-300 cursor-pointer"
+					class="btn cursor-pointer rounded-md px-4 py-2 transition-colors duration-300"
 					class:bg-white={selected === 'annualy'}
 					class:text-black={selected === 'annualy'}
 					class:bg-transparent={selected !== 'annualy'}
@@ -209,9 +258,18 @@
 	{/each}
 </div>
 
-<Limits />
+ {#if width > 1024}
+ <Limits />
+ <!-- {:else if width < 768}
+ <MobileLimits/> -->
+ {:else}
+ <MobileLimts/>
+ 
+{/if}
 <Contact />
 
+
+<svelte:window bind:innerWidth={width} />
 <style>
 	.back {
 		@media (max-width: 2800px) {
