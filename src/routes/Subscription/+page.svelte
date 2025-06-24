@@ -232,7 +232,7 @@ let width;
 				</button>
 
 				<div
-					class="badge absolute w bottom-8 left-58 rounded-2xl bg-[#6aff67] py-1 px-1 text-sm text-black"
+					class="badge absolute  bottom-8 left-60 rounded-2xl bg-[#6aff67] py-1 px-1 text-[10px] text-black"
 				>
 					Save 20%
 				</div>

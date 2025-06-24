@@ -50,7 +50,7 @@
 
 		{#if selectedType === 'annualy' && selectedPrice !== 'Free'}
 			<div
-				class="font-inter absolute right-4 top-4 w-[54px] rounded-full bg-[#6aff67] px-1 py-1 text-center text-[10px] font-bold text-black"
+				class="font-inter absolute right-4 top-4 w-[54px] text-lg rounded-full bg-[#6aff67] px-1 py-1 text-center  font-bold text-black"
 				in:fly={{ x: -10, opacity: 0, duration: 400, easing: cubicIn }}
 				out:fly={{ x: -24, duration: 800, easing: cubicInOut }}
 			>
