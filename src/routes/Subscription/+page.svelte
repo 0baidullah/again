@@ -172,9 +172,9 @@ let width;
 <div class=" flex items-center justify-center">
 	<div><img src={Defaul} alt="Default" class="back" /></div>
 	<div class="b mt-24 flex w-[95%] flex-col items-center justify-center gap-1">
-		<div class="flex w-full flex-col items-center justify-center rounded-md sm:flex-row sm:gap-2">
+		<div class="flex w-full  items-center justify-center rounded-md sm:flex-row gap-2">
 			<div class="SI font-bold">JOIN</div>
-			<div class="SI font-bold text-[#dd0355] sm:hidden">28,643</div>
+			<div class="SI font-bold text-[#dd0355] sm:hidden">{memberCount}</div>
 
 			<span class="hidden sm:flex">
 				{#each digits as char, i}
@@ -445,21 +445,21 @@ let width;
 		text-transform: uppercase;
 
 		@media (max-width: 320px) {
-			font-size: 30px;
+			font-size: 25px;
 		}
 
 		@media (max-width: 375px) {
-			font-size: 30px;
+			font-size: 25px;
 		}
 
 		@media (max-width: 475px) {
-			font-size: 30px;
+			font-size: 25px;
 		}
 		@media (max-width: 495px) {
-			font-size: 30px;
+			font-size: 25px;
 		}
 		@media (max-width: 515px) {
-			font-size: 30px;
+			font-size: 25px;
 		}
 	}
 	.SE {
@@ -469,6 +469,9 @@ let width;
 		font-weight: 400;
 		text-align: center;
 @media (max-width: 320px) {
+	font-size: 14px;
+}
+@media (max-width: 375px) {
 	font-size: 14px;
 }
 

@@ -322,7 +322,7 @@
 						<p class="text-md font-roboto font-bold uppercase">{mob.name}</p>
 					</div>
 					<button
-						class=" justify-center whitespace-nowrap rounded-xl {mob.btn}  px-1 py-3 text-xl font-bold italic transition-all duration-300"
+						class=" justify-center whitespace-nowrap rounded-xl {mob.btn}  px-1 py-3 lg:text-xl font-bold italic transition-all duration-300"
 						>{mob.badge}</button
 					>
 				</div>

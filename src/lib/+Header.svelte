@@ -25,7 +25,7 @@
 
 <div class="  flex justify-center">
 	<nav
-		class="fixed top-5 z-10 flex h-[60px] w-[95%] items-center justify-between rounded-2xl border border-white/5 bg-[rgba(8,6,10,0.83)] px-2 py-3 "
+		class="fixed top-5 z-50 flex h-[60px] w-[95%] items-center justify-between rounded-2xl border border-white/5 bg-[rgba(8,6,10,0.83)] px-2 py-3 "
 	>
 		<div class="flex items-center justify-between">
 			<!-- Logo Section - Exactly as original -->
@@ -209,7 +209,7 @@
 			<div
 				class="rounded-2xl border border-white/10 bg-[rgba(8,6,10,0.83)] p-4 shadow-2xl backdrop-blur-xl sm:p-6"
 			>
-				<div class="mb-4 flex justify-end xl:hidden">
+				<!-- <div class="mb-4 flex justify-end xl:hidden">
 					<button
 						on:click={closeMobileMenu}
 						class="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
@@ -224,49 +224,49 @@
 							></path>
 						</svg>
 					</button>
-				</div>
+				</div> -->
 
 				<div class="mb-6">
 					
 					<div class="space-y-1">
 						<a href="/get-started" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-4 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">Get started</span>
 							</div>
 						</a>
 						<a href="/shop" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-4 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">Shop</span>
 							</div>
 						</a>
 						<a href="/about" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg px-4 py-4 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">About us</span>
 							</div>
 						</a>
 						<a href="/news" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-4 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">News</span>
 							</div>
 						</a>
 						<a href="/contacts" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-4 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">Contacts</span>
 							</div>
 						</a>
 						<a href="/faqs" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg px-4 py-4 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">FAQs</span>
 							</div>
@@ -274,13 +274,13 @@
 					</div>
 				</div>
 
-				<div class="mb-4">
+				<div class="mb-2">
 					
-					<div class="space-y-1">
+					<div class="">
 					
 						<a href="/subscription" on:click={closeMobileMenu} class="block">
 							<div
-								class="flex w-full items-center rounded-lg border-b border-white/5 px-4 py-4 text-white transition-all duration-200 hover:bg-white/10"
+								class="flex w-full items-center rounded-lg border-b border-white/5 px-4 py-2  text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<img src={Star} alt="Subscription" class="mr-4 h-5 w-5" />
 								<span class="text-[16px] font-medium">Subscription</span>
@@ -288,7 +288,7 @@
 						</a>
 						<a href="/servers" on:click={closeMobileMenu} class="block">
 							<div
-								class="flex w-full items-center rounded-lg border-b border-white/5 bg-[#252327] px-4 py-4 text-white transition-all duration-200 hover:bg-white/15"
+								class="flex w-full items-center rounded-lg border-b border-white/5 bg-[#252327] px-4 py-2 text-white transition-all duration-200 hover:bg-white/15"
 							>
 								<img src={Data} alt="Servers" class="mr-4 h-5 w-5" />
 								<span class="text-[16px] font-medium">Servers</span>
@@ -296,7 +296,7 @@
 						</a>
 						<a href="/download" on:click={closeMobileMenu} class="block">
 							<div
-								class="flex w-full items-center rounded-lg border-b border-white/5 px-4 py-4 text-white transition-all duration-200 hover:bg-white/10"
+								class="flex w-full items-center rounded-lg border-b border-white/5 px-4 py-2 text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<img src={File} alt="Download" class="mr-4 h-5 w-5" />
 								<span class="text-[16px] font-medium">Download launcher</span>

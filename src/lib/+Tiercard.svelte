@@ -29,13 +29,13 @@
 <div class="relative">
 	{#if tier === 'Tier 3'}
 		<div
-			class="font-roboto text-md absolute left-0 top-[-34px] z-50 h-[50px] w-[100%] rounded-t-lg bg-[#dd0355] pl-5 pt-[6px] font-bold text-white"
+			class="font-roboto text-md absolute left-0 top-[-34px] z-10 h-[50px] w-[100%] rounded-t-lg bg-[#dd0355] pl-5 pt-[6px] font-bold text-white"
 		>
 			MOST POPULAR
 		</div>
 	{/if}
 	<div
-		class="relative z-50 flex h-[639px] flex-col items-start gap-2 rounded-2xl
+		class="relative z-10 flex h-[639px] flex-col items-start gap-2 rounded-2xl
           border border-[rgba(255,255,255,0.1)]
           p-5 pb-6
            sm:h-[636px] sm:gap-6 sm:p-5 {bg}  backdrop-blur-2xl"

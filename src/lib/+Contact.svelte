@@ -79,13 +79,13 @@
   }
 </script>
 
-<div class="mt-16 bg-[#08060A] text-white py-20 px-6 md:px-12  mx-4 sm:mx-8">
+<div class="mt-8 bg-[#08060A] text-white py-20 px-3 md:px-12   sm:mx-8    ">
   <div
-    class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-10"
+    class="max-w-full  flex flex-col lg:flex-row items-start justify-center gap-7 "
   >
     <div class="flex-1 text-left">
       <h1
-        class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-300 uppercase"
+        class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-300 uppercase"
       >
         Questions?
         <br />
@@ -99,10 +99,10 @@
 
     <form
       use:enhance={handleSubmit}
-      class="flex-1 w-full bg-[#0f0f0f] border border-gray-700 rounded-xl p-6 space-y-4"
+      class="flex-1 w-full bg-[#08060A]  border border-[rgba(255,255,255,0.1)]  rounded-xl p-6 space-y-4"
     >
       <div
-        class="bg-yellow-500/20 border border-yellow-500 text-yellow-400 text-sm p-3 rounded"
+        class="bg-yellow-500/20 border border-yellow-500 text-yellow-400 text-md p-4 rounded"
       >
         ⚠️ We may take up to 24–78 hours to reply
       </div>
@@ -132,7 +132,7 @@
           type="text"
           bind:value={name}
           placeholder="John Doe"
-          class="w-full bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+          class="w-full bg-#0D0B0F border border-[rgba(255,255,255,0.1)]  rounded px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
         <!-- {#if nameError}
           <p class="text-red-500 text-xs mt-1">{nameError}</p>
@@ -146,7 +146,7 @@
           type="email"
           bind:value={email}
           placeholder="example@mail.com"
-          class="w-full bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+          class="w-full bg-#0D0B0F border border-[rgba(255,255,255,0.1)]  rounded px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
         <!-- {#if emailError}
           <p class="text-red-500 text-xs mt-1">{emailError}</p>
@@ -161,7 +161,7 @@
           maxlength={400}
           bind:value={question}
           placeholder="..."
-          class="w-full bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+          class="w-full bg-#0D0B0F border border-[rgba(255,255,255,0.1)]  rounded px-3 py-6 text-sm focus:outline-none focus:ring-2 focus:ring-purple-700"
         />
         <!-- {#if questionError}
           <p class="text-red-500 text-xs mt-1">{questionError}</p>

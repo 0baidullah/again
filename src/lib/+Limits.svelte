@@ -4,9 +4,10 @@
 			name: 'Tier 0',
 			icon: '/tier0.png',
 			price: 'Free',
+			dp:'',
 			description: 'Everything you need to start playing.',
 			badge: 'Current Plan',
-     btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
+     btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white sm:text-[15px] ',
 			features: [
 				true,
 				true,
@@ -35,7 +36,8 @@
 			icon: '/tier0.png',
 			price: '$3.99/month',
 			description: 'Get a taste',
-      btn: 'bg-white text-black ',
+				dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)] ',
+      btn: 'bg-white text-black sm:text-[15px] ',
 			badge: 'SUBSCRIPTION',
 			features: [
 				true,
@@ -64,7 +66,8 @@
 			icon: '/Tier3.png',
 			price: '$7.99/month',
 			description: 'Amplify your experience',
-      btn: 'bg-white text-black ',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
+      btn: 'bg-white text-black  sm:text-[15px]',
 			badge: 'FREE 7-DAYS TRIAL',
 			features: [
 				true,
@@ -92,7 +95,8 @@
 			name: 'Tier 3',
 			icon: '/Tier4.png',
 			price: '$12.99/month',
-      btn: 'bg-white text-black ',
+				dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
+      btn: 'bg-white text-black  sm:text-[15px]',
 			description: 'Reach new limits',
 			badge: 'SUBSCRIPTION',
 			features: [
@@ -168,24 +172,24 @@
 			<div
 				class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
 			>
-				<div class="flex items-center gap-2   lg:justify-center">
-					<img src={tier.icon} alt=" icon" class="h-5 w-5" />
+				<div class="flex items-center gap-2 lg:justify-center {tier.dp}">
+					<img src={tier.icon} alt=" icon" class="h-5 w-5 {tier.dp}" />
 					<p class="text-md font-roboto font-bold uppercase">{tier.name}</p>
 				</div>
 				<button
-					class=" justify-center whitespace-nowrap rounded-xl {tier.btn}  px-1 py-3 text-xl font-bold italic  transition-all duration-300"
+					class=" justify-center whitespace-nowrap rounded-xl {tier.btn}   px-1 py-3 text-sm lg:text-xl md:font-bold italic  transition-all duration-300"
 					>{tier.badge}</button
 				>
 			</div>
 			<div
-				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold lg:justify-center 2xl:p-0"
+				class="font-inter-tight relative top-[5px] flex h-12 items-center border-b border-t border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold lg:justify-center lg:p-0"
 			>
 				{tier.description}
 			</div>
 			<ul>
 				{#each tier.features as feat, i}
 					<li
-						class="font-inter-tight relative top-[5px] flex h-12 items-center  border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold justify-center 2xl:p-0"
+						class="font-inter-tight relative top-[5px] flex h-12 items-center  border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold justify-center lg:p-0"
 					>
 						{#if feat === true}
 							<img src="/Tick2.png" alt=" icon" class="h-5 w-5" />
