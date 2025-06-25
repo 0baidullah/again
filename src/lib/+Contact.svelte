@@ -79,7 +79,7 @@
   }
 </script>
 
-<div class="mt-8 bg-[#08060A] text-white py-20 px-3 md:px-12   sm:mx-8    ">
+<div class="mt-8 bg-[#08060A] text-white py-20 px-3 md:px-12  mx-3 sm:mx-8    ">
   <div
     class="max-w-full  flex flex-col lg:flex-row items-start justify-center gap-7 "
   >
