@@ -50,7 +50,7 @@
 
 		{#if selectedType === 'annualy' && selectedPrice !== 'Free'}
 			<div
-				class="font-inter absolute right-4 top-4 w-[54px] text-lg rounded-full bg-[#6aff67] px-1 py-1 text-center  font-bold text-black"
+				class="font-inter absolute right-4 top-4 w-[54px] rounded-full bg-[#6aff67] px-1 py-1 text-center text-[15px] font-bold text-black"
 				in:fly={{ x: -10, opacity: 0, duration: 400, easing: cubicIn }}
 				out:fly={{ x: -24, duration: 800, easing: cubicInOut }}
 			>
@@ -59,7 +59,8 @@
 		{/if}
 
 		<div class="relative z-40 flex h-[20px] w-[294px] items-center gap-2 {dp}">
-			<img src={icon} alt="{tier} icon" class=" h-4 w-4" />
+			<img src={icon} alt="{tier} icon" class=" h-5 w-5 bg-transparent {dp} " />
+			<!-- <svg class=""><use href='/Tier3.png'></use> </svg> -->
 			<span
 				class="font-roboto flex-1 text-[16px] font-bold uppercase italic leading-[20px] tracking-[.15em] text-[rgba(238,237,238,0.87)]"
 			>
@@ -121,9 +122,9 @@
 
 		<div class="flex w-full flex-col items-center gap-2">
 			<div
-				class="flex h-[52px] w-full items-center justify-center gap-[20px] rounded-md {btn} p-[16px_28px] "
+				class="flex h-[52px] w-full items-center justify-center gap-[20px] rounded-md {btn} p-[16px_28px]"
 			>
-				<button class="font-roboto text-[16px] font-bold uppercase italic leading-[20px] ">
+				<button class="font-roboto text-[16px] font-bold uppercase italic leading-[20px]">
 					{buttonText}
 				</button>
 			</div>
@@ -143,7 +144,7 @@
 		<div class="flex w-[294px] flex-col items-start gap-3">
 			{#each features as feat}
 				<div class="flex h-[49px] w-full items-center gap-3">
-					<img src={Tick} alt="feature icon" class="h-5 w-5" />
+					<img src={Tick} alt="feature icon" class="h-4 w-4" />
 					<span class="font-inter flex-1 text-[15px] font-medium leading-[25px] text-white">
 						{feat}
 					</span>
