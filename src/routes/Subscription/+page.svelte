@@ -542,14 +542,14 @@ let width;
 		}
 
 		50% {
-			transform: translateY(-3.5px);
+			transform: translateY(-2.5px);
 		}
 
 		75% {
 			transform: translateY(0px);
 		}
 		90% {
-			transform: translateY(-3.5px);
+			transform: translateY(-2.5px);
 		}
 		100% {
 			transform: translateY(0);
