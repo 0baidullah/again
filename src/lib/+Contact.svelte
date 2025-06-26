@@ -79,14 +79,14 @@
 	<div class="flex max-w-full flex-col items-start justify-center gap-7 lg:flex-row">
 		<div class="flex-1 text-left">
 			<h1
-				class="text-3xl font-extrabold uppercase leading-tight text-gray-300 md:text-5xl lg:text-6xl"
+				class="text-2xl font-extrabold uppercase leading-tight text-gray-300 md:text-5xl lg:text-[64px]"
 			>
 				Questions?
 				<br />
-				<span class="text-white">No Problem,</span>
+				<span class=" text-white">No Problem,</span>
 				<br />
 				<span class="text-white">
-					We Have The <span class="text-gray-300">Answers.</span>
+					We Have The <span class=" text-gray-300">Answers.</span>
 				</span>
 			</h1>
 		</div>
@@ -95,9 +95,14 @@
 			use:enhance={handleSubmit}
 			class="w-full flex-1 space-y-4 rounded-xl border border-[rgba(255,255,255,0.1)] bg-[#08060A] p-6"
 		>
-			<div class="text-md rounded border border-yellow-500 bg-yellow-500/20 p-1 text-yellow-400">
+			<!-- <div class="text-md rounded border border-yellow-500 bg-yellow-500/20 p-1 text-yellow-400">
 				⚠️ We may take up to 24–78 hours to reply
-			</div>
+			</div> -->
+			<h1
+				class="text-3xl font-bold  leading-tight text-gray-300 md:text-5xl lg:text-[64px]"
+			>
+				Conact us
+			</h1>
 
 			{#if $serverError}
 				<div
@@ -155,12 +160,12 @@
 						<img src="/Mesaage.png" alt="icon" class="icon-img" />
 					</span>
 					<!-- svelte-ignore element_invalid_self_closing_tag -->
-					<div class="flex flex-col w-full">
+					<div class="flex w-full flex-col">
 						<textarea
 							maxlength={1000}
 							bind:value={question}
 							placeholder=""
-							class="bg-#0D0B0F h-50 flex w-full  rounded border border-[rgba(255,255,255,0.1)] pl-11 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-700"
+							class="bg-#0D0B0F h-50 flex w-full rounded border border-[rgba(255,255,255,0.1)] py-2 pl-11 text-sm focus:outline-none focus:ring-2 focus:ring-purple-700"
 						/>
 						<!-- {#if questionError}
           <p class="text-red-500 text-xs mt-1">{questionError}</p>
@@ -177,13 +182,10 @@
 			<button
 				type="submit"
 				disabled={!formValid || $isPending}
-				class="mt-4 w-full rounded-lg  py-2 font-bold uppercase tracking-wide text-white transition disabled:opacity-50"
-        style="background: rgba(136, 0, 240, 1);
-
-
+				class="mt-4 w-full rounded-lg py-2 font-bold uppercase tracking-wide text-white drop-shadow-[0_0_8px_#8800f0] transition"
+				style="background: #8800F0;
        hover:box-shadow: 0px 4px 12px 4px rgba(136, 0, 240, 0.2);
-
-"
+             "
 			>
 				{$isPending ? 'Sending...' : 'Send'}
 			</button>

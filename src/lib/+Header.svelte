@@ -113,7 +113,7 @@
 					</button>
 				</a>
 
-				<a href="/Billing">
+				<a href="/Servers">
 					<button
 						class="font-inter-tight flex h-9 w-[96px] items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/10"
 						style="background: #252327;"
@@ -126,7 +126,7 @@
 					</button>
 				</a>
 
-				<a href="/get-started">
+				<a href="/Billing">
 					<button
 						class="font-inter-tight flex h-9 w-[167px] items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
 					>
