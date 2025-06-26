@@ -1,5 +1,5 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
 	import Defaul from '../../lib/assets/Default.png';
 	import Tiercard from '../../lib/+Tiercard.svelte';
@@ -9,9 +9,7 @@
 	import Limits from '../../lib/+Limits.svelte';
 	import MobileLimts from '../../lib/+Mobile.svelte';
 	import Mobile from '../../lib/+Mobile.svelte';
-	  import { onMount, onDestroy } from 'svelte';
-
-
+	import { onMount, onDestroy } from 'svelte';
 
 	const plans = [
 		{
@@ -32,15 +30,15 @@
 			],
 			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
 			month: '',
-			discount:'-20%'
+			discount: '-20%'
 		},
 		{
 			icon: '/tier0.png',
 			tier: 'Tier 1',
-			title: 'Public',
+			title: 'Public+',
 			price: '$3.99',
 			anuallayprice: '$2.99',
-			buttonText: 'Upgrade',
+			buttonText: 'Subscribe',
 			giftIcon: Gift,
 			bg: 'bg-[linear-gradient(0deg,rgba(8,6,10,0.15),rgba(8,6,10,0.15)),radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.02)_25.18%,rgba(231,223,216,0.02)_100%)]',
 			features: [
@@ -53,7 +51,7 @@
 			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
 			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
-			discount:'-20%'
+			discount: '-20%'
 		},
 		{
 			icon: '/Tier3.png',
@@ -62,7 +60,7 @@
 			price: '$7.99',
 			anuallayprice: '$5.58',
 			isCurrent: true,
-			buttonText: 'Current Plan',
+			buttonText: 'Free 7-Days Trial',
 			giftIcon: Gift,
 			features: [
 				'Access to 100+ public servers',
@@ -75,8 +73,8 @@
 
 			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
-			month: '/month'
-			,discount:'-20%'
+			month: '/month',
+			discount: '-20%'
 		},
 		{
 			icon: '/Tier4.png',
@@ -84,7 +82,7 @@
 			title: 'Underground',
 			price: '$12.99',
 			anuallayprice: '$6.67',
-			buttonText: 'Upgrade',
+			buttonText: 'Subscribe',
 			giftIcon: Gift,
 			features: [
 				'Access to 100+ public servers',
@@ -98,7 +96,7 @@
 			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
 			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
-			discount:'-40%'
+			discount: '-40%'
 		}
 		// Add 2 more plans as needed...
 	];
@@ -126,55 +124,51 @@
 	let formatted = formatIndianComma(memberCount);
 	let digits = formatted.split('');
 
+	//  let isMobile = true;
 
+	//   function checkScreen() {
+	//     isMobile = window.innerWidth <= 1024;
+	//   }
 
-//  let isMobile = true;
+	//   onMount(() => {
+	//     checkScreen();
+	//     window.addEventListener('resize', checkScreen);
+	//   });
 
-//   function checkScreen() {
-//     isMobile = window.innerWidth <= 1024;
-//   }
+	//   onDestroy(() => {
+	//     window.removeEventListener('resize', checkScreen);
+	//   });
 
-//   onMount(() => {
-//     checkScreen();
-//     window.addEventListener('resize', checkScreen);
-//   });
+	let isMobile = false;
 
-//   onDestroy(() => {
-//     window.removeEventListener('resize', checkScreen);
-//   });
+	onMount(() => {
+		const mediaQuery = window.matchMedia('(max-width: 1024px)');
 
+		// Initial value
+		isMobile = mediaQuery.matches;
 
-let isMobile = false;
+		// Update on screen resize
+		// @ts-ignore
+		const handler = (event) => {
+			isMobile = event.matches;
+		};
 
-  onMount(() => {
-    const mediaQuery = window.matchMedia('(max-width: 1024px)');
+		mediaQuery.addEventListener('change', handler);
 
-    // Initial value
-    isMobile = mediaQuery.matches;
-
-    // Update on screen resize
-	// @ts-ignore
-	const handler = (event) => {
-	  isMobile = event.matches;
-	};
-
-    mediaQuery.addEventListener('change', handler);
-
-    // Cleanup
-    return () => {
-      mediaQuery.removeEventListener('change', handler);
-    };
-  });
-let width;
-  
+		// Cleanup
+		return () => {
+			mediaQuery.removeEventListener('change', handler);
+		};
+	});
+	let width;
 </script>
 
-<div class=" flex items-center justify-center">
+<div class=" mt-22 flex items-center justify-center">
 	<div><img src={Defaul} alt="Default" class="back" /></div>
 	<div class="b mt-24 flex w-[95%] flex-col items-center justify-center gap-1">
-		<div class="flex w-full  items-center justify-center rounded-md sm:flex-row gap-2">
+		<div class="flex w-full flex-wrap items-center justify-center gap-2 rounded-md sm:flex-row">
 			<div class="SI font-bold">JOIN</div>
-			<div class="SI font-bold text-[#dd0355] sm:hidden">{memberCount}</div>
+			<div class="SI font-bold text-[#dd0355] sm:hidden">28,643</div>
 
 			<span class="hidden sm:flex">
 				{#each digits as char, i}
@@ -200,7 +194,7 @@ let width;
 
 			<div class="SI font-bold">OTHERS</div>
 		</div>
-		<div class="SI">ON no hesi vip</div>
+		<div class="S2 flex flex-col items-center justify-center">ON no hesi vip</div>
 		<div class="SE">Enhance Your No Hesi Experience With VIP</div>
 	</div>
 </div>
@@ -210,7 +204,7 @@ let width;
 		<div class="flex items-center justify-center">
 			<div class="relative z-[2] flex rounded-lg bg-[rgba(8,6,10,0.83)] p-1">
 				<button
-					class="btn duration-400 cursor-pointer rounded-md px-4 py-2 transition-colors delay-150"
+					class="btn cursor-pointer rounded-md px-4 py-2 transition-colors delay-150 duration-300"
 					class:bg-white={selected === 'month'}
 					class:text-black={selected === 'month'}
 					class:bg-transparent={selected !== 'month'}
@@ -232,8 +226,8 @@ let width;
 				</button>
 
 				<div
-					class="badge absolute  bottom-8 left-60 :q
-					 rounded-2xl bg-[#6aff67] py-1 px-1 text-[10px] text-black"
+					class="badge :q absolute bottom-8 left-50 sm:left-60
+					 rounded-2xl bg-[#6aff67] px-1 py-1 text-[10px] text-black"
 				>
 					Save 20%
 				</div>
@@ -244,14 +238,14 @@ let width;
 			<img
 				src="/leftarrow.png"
 				alt="arrow"
-				class="h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform duration-600 group-hover:translate-x-[5px]"
+				class="duration-600 h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform group-hover:translate-x-[5px]"
 			/>
 		</div>
 	</div>
 </div>
 
 <div
-	class=" mt-12 grid grid-cols-1 gap-3 lg:gap-1 px-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-2  xl:grid-cols-4"
+	class=" mt-12 grid grid-cols-1 gap-3 px-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-2 lg:gap-1 xl:grid-cols-4"
 >
 	{#each plans as plan}
 		<Tiercard
@@ -262,18 +256,17 @@ let width;
 	{/each}
 </div>
 
- {#if width > 1024}
- <Limits />
- <!-- {:else if width < 768}
+{#if width > 1024}
+	<Limits />
+	<!-- {:else if width < 768}
  <MobileLimits/> -->
- {:else}
- <MobileLimts/>
- 
+{:else}
+	<MobileLimts />
 {/if}
 <Contact />
 
-
 <svelte:window bind:innerWidth={width} />
+
 <style>
 	.back {
 		@media (max-width: 2800px) {
@@ -445,21 +438,48 @@ let width;
 		text-transform: uppercase;
 
 		@media (max-width: 320px) {
-			font-size: 25px;
+			font-size: 28px;
 		}
 
 		@media (max-width: 375px) {
-			font-size: 25px;
+			font-size: 28px;
 		}
 
 		@media (max-width: 475px) {
-			font-size: 25px;
+			font-size: 28px;
 		}
 		@media (max-width: 495px) {
-			font-size: 25px;
+			font-size: 28px;
 		}
 		@media (max-width: 515px) {
-			font-size: 25px;
+			font-size: 28px;
+		}
+	}
+
+	.S2 {
+		font-size: 64px;
+		/* font-family: 'Roboto flex'; */
+		font-weight: 1000;
+		
+		text-transform: uppercase;
+		
+
+	@media (max-width: 320px) {
+			font-size: 28px;
+		}
+
+		@media (max-width: 375px) {
+			font-size: 28px;
+		}
+
+		@media (max-width: 475px) {
+			font-size: 28px;
+		}
+		@media (max-width: 495px) {
+			font-size: 28px;
+		}
+		@media (max-width: 515px) {
+			font-size: 28px;
 		}
 	}
 	.SE {
@@ -468,27 +488,26 @@ let width;
 		/* font-family: 'Inter Tight'; */
 		font-weight: 400;
 		text-align: center;
-@media (max-width: 320px) {
-	font-size: 14px;
-}
-@media (max-width: 375px) {
-	font-size: 14px;
-}
-
+		@media (max-width: 320px) {
+			font-size: 14px;
+		}
+		@media (max-width: 375px) {
+			font-size: 14px;
+		}
 	}
 	.btn {
 		width: 150px;
 		height: 36px;
 
 		@media (max-width: 320px) {
-			width: 130px;
+			width: 110px;
 			height: 36px;
+			left: 200px;
 		}
 	}
 	.badge {
-		
 		@media (max-width: 320px) {
-			width: 50px;
+			width: 45px;
 			height: 16px;
 			font-size: 8px;
 		}
@@ -536,7 +555,7 @@ let width;
 		color: #dd0355;
 		font-weight: 1000;
 		/*  make digit bounce  */
-		animation: bounce 1.5s linear;
+		animation: bounce 1.5s ease-in;
 	}
 
 	@keyframes bounce {
@@ -545,15 +564,9 @@ let width;
 		}
 
 		50% {
-			transform: translateY(-2.5px);
+			transform: translateY(-2px);
 		}
 
-		75% {
-			transform: translateY(0px);
-		}
-		90% {
-			transform: translateY(-2.5px);
-		}
 		100% {
 			transform: translateY(0);
 		}

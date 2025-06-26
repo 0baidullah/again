@@ -4,10 +4,10 @@
 			name: 'Tier 0',
 			icon: '/tier0.png',
 			price: 'Free',
-			dp:'',
+			dp: '',
 			description: 'Everything you need to start playing.',
 			badge: 'Current Plan',
-     btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white sm:text-[15px] ',
+			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white sm:text-[15px] ',
 			features: [
 				true,
 				true,
@@ -27,8 +27,7 @@
 				true,
 				false,
 				false,
-				'4',
-        
+				'4'
 			]
 		},
 		{
@@ -36,8 +35,8 @@
 			icon: '/tier0.png',
 			price: '$3.99/month',
 			description: 'Get a taste',
-				dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)] ',
-      btn: 'bg-white text-black sm:text-[15px] ',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)] ',
+			btn: 'bg-white text-black sm:text-[15px] ',
 			badge: 'SUBSCRIPTION',
 			features: [
 				true,
@@ -67,7 +66,7 @@
 			price: '$7.99/month',
 			description: 'Amplify your experience',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
-      btn: 'bg-white text-black  sm:text-[15px]',
+			btn: 'bg-white text-black  sm:text-[15px]',
 			badge: 'FREE 7-DAYS TRIAL',
 			features: [
 				true,
@@ -95,8 +94,8 @@
 			name: 'Tier 3',
 			icon: '/Tier4.png',
 			price: '$12.99/month',
-				dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
-      btn: 'bg-white text-black  sm:text-[15px]',
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
+			btn: 'bg-white text-black  sm:text-[15px]',
 			description: 'Reach new limits',
 			badge: 'SUBSCRIPTION',
 			features: [
@@ -177,7 +176,7 @@
 					<p class="text-md font-roboto font-bold uppercase">{tier.name}</p>
 				</div>
 				<button
-					class=" justify-center whitespace-nowrap rounded-xl {tier.btn}   px-1 py-3 text-sm lg:text-xl md:font-bold italic  transition-all duration-300"
+					class=" justify-center whitespace-nowrap rounded-xl {tier.btn}   px-1 py-3 text-sm italic transition-all duration-300 md:font-bold lg:text-xl"
 					>{tier.badge}</button
 				>
 			</div>
@@ -189,7 +188,7 @@
 			<ul>
 				{#each tier.features as feat, i}
 					<li
-						class="font-inter-tight relative top-[5px] flex h-12 items-center  border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold justify-center lg:p-0"
+						class="font-inter-tight relative top-[5px] flex h-12 items-center justify-center border-b border-[rgba(255,255,255,0.1)] bg-[#08060A] pb-3 text-sm font-semibold lg:p-0"
 					>
 						{#if feat === true}
 							<img src="/Tick2.png" alt=" icon" class="h-5 w-5" />

@@ -25,7 +25,7 @@
 
 <div class="  flex justify-center">
 	<nav
-		class="fixed top-5 z-50 flex h-[60px] w-[95%] items-center justify-between rounded-2xl border border-white/5 bg-[rgba(8,6,10,0.83)] px-2 py-3 "
+		class="fixed top-5 z-20 flex h-[60px] w-[95%] items-center justify-between rounded-2xl border border-white/5 bg-[rgba(8,6,10,0.83)] px-2 py-3"
 	>
 		<div class="flex items-center justify-between">
 			<!-- Logo Section - Exactly as original -->
@@ -50,42 +50,40 @@
 				</a>
 				<a href="/get-started">
 					<button
-						class="h-[36px] w-[49px] gap-1 rounded-md p-2 font-['Inter_Tight'] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
+						class="h-[36px] w-[49px] gap-1 rounded-md p-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
 					>
 						Shop
 					</button>
 				</a>
 				<a href="/get-started">
 					<button
-						class="h-[36px] w-[72px] gap-1 rounded-md p-2 font-['Inter_Tight'] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
+						class="h-[36px] w-[72px] gap-1 rounded-md p-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
 					>
 						About us
 					</button>
 				</a>
 				<a href="/get-started">
 					<button
-						class="h-[36px] w-[52px] gap-1 rounded-md p-2 font-['Inter_Tight'] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
+						class="h-[36px] w-[52px] gap-1 rounded-md p-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
 					>
 						News
 					</button>
 				</a>
 				<a href="/get-started">
 					<button
-						class="h-[36px] w-[73px] gap-1 rounded-md p-2 font-['Inter_Tight'] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
+						class="h-[36px] w-[73px] gap-1 rounded-md p-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
 					>
 						Contacts
 					</button>
 				</a>
 				<a href="/get-started">
 					<button
-						class="h-[36px] w-[42px] gap-1 rounded-md p-2 font-['Inter_Tight'] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
+						class="h-[36px] w-[42px] gap-1 rounded-md p-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
 					>
 						FAQs
 					</button>
 				</a>
 			</div>
-
-			
 		</div>
 
 		<div class="flex items-center">
@@ -115,7 +113,7 @@
 					</button>
 				</a>
 
-				<a href="/get-started">
+				<a href="/Billing">
 					<button
 						class="font-inter-tight flex h-9 w-[96px] items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/10"
 						style="background: #252327;"
@@ -149,7 +147,7 @@
 				</a>
 
 				<div
-					class="ml-1 flex h-[36px] w-[160px] items-center gap-[6px] rounded-md bg-purple-800 px-3 py-2"
+					class="ml-1 flex h-[36px] w-full items-center gap-[6px] rounded-md bg-purple-800 px-3 py-2"
 				>
 					<img
 						src={Avatar}
@@ -157,14 +155,13 @@
 						class="h-[28px] w-[28px] rounded-full border border-white/5"
 					/>
 					<span
-						class="font-inter-tight h-[20px] w-[80px] text-[14px] font-medium leading-5 tracking-normal text-white"
+						class="font-inter-tight hidden h-[20px] w-[80px] text-[14px] font-medium leading-5 tracking-normal text-white xl:inline"
 						>JohnDoe_911</span
 					>
-					<img src={Arrow} alt="Logo" class="ml-1 h-[6px] w-[12px]" />
+					<img src={Arrow} alt="Logo" class="ml-1 hidden h-[6px] w-[12px] xl:inline" />
 				</div>
 			</div>
 
-	
 			<button
 				class="relative z-[60] flex h-10 w-10 items-center justify-center rounded-md border border-white/5 transition-colors hover:bg-white/5 xl:hidden"
 				on:click={toggleMobileMenu}
@@ -203,19 +200,19 @@
 		></div>
 
 		<div
-			class="fixed left-4 right-4 top-[80px] z-50 max-h-[calc(100vh-100px)] overflow-y-auto sm:left-6 sm:right-6 md:left-8 md:right-8 xl:hidden"
+			class="fixed left-4 right-4 top-[40px] z-50 max-h-[calc(100vh-100px)] overflow-y-auto sm:left-6 sm:right-6 md:left-8 md:right-8 xl:hidden"
 			transition:slide={{ duration: 300 }}
 		>
 			<div
-				class="rounded-2xl border border-white/10 bg-[rgba(8,6,10,0.83)] p-4 shadow-2xl backdrop-blur-xl sm:p-6"
+				class="rounded-2xl border border-white/10 bg-[rgba(8,6,10,0.83)] p-1 shadow-2xl backdrop-blur-xl sm:p-6"
 			>
-				<!-- <div class="mb-4 flex justify-end xl:hidden">
+				<div class="mb-1 flex justify-end xl:hidden">
 					<button
 						on:click={closeMobileMenu}
 						class="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
 						aria-label="Close menu"
 					>
-						<svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg class=" w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
@@ -224,49 +221,48 @@
 							></path>
 						</svg>
 					</button>
-				</div> -->
+				</div>
 
-				<div class="mb-6">
-					
+				<div class="">
 					<div class="space-y-1">
 						<a href="/get-started" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">Get started</span>
 							</div>
 						</a>
 						<a href="/shop" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">Shop</span>
 							</div>
 						</a>
 						<a href="/about" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">About us</span>
 							</div>
 						</a>
 						<a href="/news" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">News</span>
 							</div>
 						</a>
 						<a href="/contacts" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg  px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">Contacts</span>
 							</div>
 						</a>
 						<a href="/faqs" on:click={closeMobileMenu} class="block">
 							<div
-								class="w-full rounded-lg px-4 py-1 text-left text-white transition-all duration-200 hover:bg-white/10"
+								class="w-full rounded-lg px-4 text-left text-white transition-all duration-200 hover:bg-white/10"
 							>
 								<span class="text-[16px] font-medium">FAQs</span>
 							</div>
@@ -274,15 +270,13 @@
 					</div>
 				</div>
 
-				<div class="mb-2">
-					
+				<div class="">
 					<div class="">
-					
 						<a href="/subscription" on:click={closeMobileMenu} class="block">
 							<div
-								class="flex w-full items-center rounded-lg border-b border-white/5 px-4 py-2  text-white transition-all duration-200 hover:bg-white/10"
+								class="flex w-full items-center rounded-lg border-b border-white/5 px-4 py-2 text-white transition-all duration-200 hover:bg-white/10"
 							>
-								<img src={Star} alt="Subscription" class="mr-4 h-5 w-5" />
+								<img src={Star} alt="Subscription" class="mr-4 w-5" />
 								<span class="text-[16px] font-medium">Subscription</span>
 							</div>
 						</a>
@@ -290,7 +284,7 @@
 							<div
 								class="flex w-full items-center rounded-lg border-b border-white/5 bg-[#252327] px-4 py-2 text-white transition-all duration-200 hover:bg-white/15"
 							>
-								<img src={Data} alt="Servers" class="mr-4 h-5 w-5" />
+								<img src={Data} alt="Servers" class="mr-4 w-5" />
 								<span class="text-[16px] font-medium">Servers</span>
 							</div>
 						</a>
@@ -298,15 +292,12 @@
 							<div
 								class="flex w-full items-center rounded-lg border-b border-white/5 px-4 py-2 text-white transition-all duration-200 hover:bg-white/10"
 							>
-								<img src={File} alt="Download" class="mr-4 h-5 w-5" />
+								<img src={File} alt="Download" class="mr-4 w-5" />
 								<span class="text-[16px] font-medium">Download launcher</span>
 							</div>
 						</a>
-						
 					</div>
 				</div>
-
-			
 			</div>
 		</div>
 	{/if}

@@ -26,7 +26,7 @@
 	console.log(dp);
 </script>
 
-<div class="relative">
+<div class="relative  ">
 	{#if tier === 'Tier 3'}
 		<div
 			class="font-roboto text-md absolute left-0 top-[-34px] z-10 h-[50px] w-[100%] rounded-t-lg bg-[#dd0355] pl-5 pt-[6px] font-bold text-white"
@@ -59,7 +59,7 @@
 		{/if}
 
 		<div class="relative z-40 flex h-[20px] w-[294px] items-center gap-2 {dp}">
-			<img src={icon} alt="{tier} icon" class=" h-5 w-5 bg-transparent {dp} " />
+			<img src={icon} alt="{tier} icon" class=" h-6 w-6 bg-transparent {dp} " />
 			<!-- <svg class=""><use href='/Tier3.png'></use> </svg> -->
 			<span
 				class="font-roboto flex-1 text-[16px] font-bold uppercase italic leading-[20px] tracking-[.15em] text-[rgba(238,237,238,0.87)]"

@@ -4,6 +4,7 @@
 			name: 'Tier 0',
 			icon: '/tier0.png',
 			price: 'Free',
+				dp: '',
 			description: 'Everything you need to start playing.',
 			badge: 'Current Plan',
 			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
@@ -35,6 +36,7 @@
 			price: '$3.99/month',
 			description: 'Get a taste',
 			btn: 'bg-white text-black ',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)] ',
 			badge: 'SUBSCRIPTION',
 			features: [
 				'Access to Help and Help FAQ ',
@@ -63,6 +65,7 @@
 			icon: '/Tier3.png',
 			price: '$7.99/month',
 			description: 'Amplify your experience',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			btn: 'bg-white text-black ',
 			badge: 'FREE 7-DAYS TRIAL',
 			features: [
@@ -92,6 +95,7 @@
 			icon: '/Tier4.png',
 			price: '$12.99/month',
 			btn: 'bg-white text-black ',
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
 			description: 'Reach new limits',
 			badge: 'SUBSCRIPTION',
 			features: [
@@ -122,6 +126,7 @@
 			name: 'Tier 0',
 			icon: '/tier0.png',
 			price: 'Free',
+				dp: '',
 			description: 'Everything you need to start playing.',
 			badge: 'Current Plan',
 			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
@@ -137,6 +142,7 @@
 			price: '$3.99/month',
 			description: 'Get a taste',
 			btn: 'bg-white text-black ',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)] ',
 			badge: 'SUBSCRIPTION',
 			features: [
 				'Access to Help and Help FAQ ',
@@ -153,6 +159,7 @@
 			icon: '/Tier3.png',
 			price: '$7.99/month',
 			description: 'Amplify your experience',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			btn: 'bg-white text-black ',
 			badge: 'FREE 7-DAYS TRIAL',
 			features: [
@@ -177,6 +184,7 @@
 			icon: '/Tier4.png',
 			price: '$12.99/month',
 			btn: 'bg-white text-black ',
+				dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
 			description: 'Reach new limits',
 			badge: 'SUBSCRIPTION',
 			features: [
@@ -265,8 +273,8 @@
 				<div
 					class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
 				>
-					<div class="flex items-center gap-2 2xl:justify-center">
-						<img src={tier.icon} alt=" icon" class="h-5 w-5" />
+					<div class="flex items-center gap-2 2xl:justify-center {tier.dp}">
+						<img src={tier.icon} alt=" icon" class="h-5 w-5 {tier.dp}" />
 						<p class="text-md font-roboto font-bold uppercase">{tier.name}</p>
 					</div>
 					<button
@@ -317,8 +325,8 @@
 				<div
 					class="sticky top-12 z-10 flex flex-col gap-3 self-stretch rounded-t-2xl bg-[#08060A] p-3 2xl:top-20"
 				>
-					<div class="flex items-center gap-2 2xl:justify-center">
-						<img src={mob.icon} alt=" icon" class="h-5 w-5" />
+					<div class="flex items-center gap-2 2xl:justify-center {mob.dp}">
+						<img src={mob.icon} alt=" icon" class="h-6 w-5 {mob.dp}"  />
 						<p class="text-md font-roboto font-bold uppercase">{mob.name}</p>
 					</div>
 					<button
