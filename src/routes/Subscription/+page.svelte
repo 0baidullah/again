@@ -41,6 +41,7 @@
 			buttonText: 'Subscribe',
 			giftIcon: Gift,
 			bg: 'bg-[linear-gradient(0deg,rgba(8,6,10,0.15),rgba(8,6,10,0.15)),radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.02)_25.18%,rgba(231,223,216,0.02)_100%)]',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
 			features: [
 				'Access to “Public Pack” Servers',
 				' In-Game Badges',
@@ -48,7 +49,6 @@
 				'Priority Queue for Server Hosting'
 			],
 
-			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
 			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
 			discount: '-20%'
@@ -69,10 +69,10 @@
 				'Priority Queue for Server Hosting',
 				'Priority Queue for Server Hosting'
 			],
+			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.05)_25.18%,rgba(255,129,38,0.05)_100%)]',
 
 			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
-			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			month: '/month',
 			discount: '-20%'
 		},
@@ -93,9 +93,9 @@
 				'Priority Queue for Server Hosting'
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.22)_25.18%,rgba(254,44,85,0.22)_100%)]',
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
 			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
-			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
 			discount: '-40%'
 		}
 		// Add 2 more plans as needed...
